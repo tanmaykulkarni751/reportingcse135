@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
-import BarChart from './components/BarChart'
+import PieChart from './components/PieChart'
 import './App.css'
 
 const App = () => {
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+
+    var config = {
+      method: 'get',
+      url: 'https://collector.joshuagarcia.site/api/analytics',
+      headers: { },
+    };
+    axios(config)
+      .then(res => {
+        setData(res.data);
+      })
+  }, []);
+
   return (
     <div>
-      <BarChart />
+       {(data.length > 0) ? <PieChart data={data} /> : <div>Loading...</div>}
     </div>
   )
 }
