@@ -10,7 +10,6 @@ const BarChart = ({ data }) => {
     let barData = [];
     let labels = [];
 
-    // get all values from data map
     for (const [key, value] of Object.entries(data)) {
         if (key != "null") {
             labels.push(key);
@@ -71,6 +70,7 @@ const BarChart = ({ data }) => {
                             fontSize: 25,
                         },
                     },
+ 
                 }}
             />
         </div>
