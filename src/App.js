@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
-import PieChart from './components/PieChart'
 import './App.css'
+import Loading from './components/Loading'
+import Charts from './Charts'
 
 const App = () => {
 
@@ -13,7 +13,7 @@ const App = () => {
     var config = {
       method: 'get',
       url: 'https://collector.joshuagarcia.site/api/analytics',
-      headers: { },
+      headers: {},
     };
     axios(config)
       .then(res => {
@@ -23,7 +23,12 @@ const App = () => {
 
   return (
     <div>
-       {(data.length > 0) ? <PieChart data={data} /> : <div>Loading...</div>}
+      {(data.length > 0) ? <Charts data={data} /> : <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: '25%'
+      }}><Loading type={"spinningBubbles"} color={"#000000"} /></div>}
     </div>
   )
 }
