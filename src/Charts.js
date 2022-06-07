@@ -122,18 +122,6 @@ export default function Charts({ data }) {
     return (
 
       <div>
-
-      <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' exact />
-        <Route path='/about' />
-        <Route path='/services' />
-        <Route path='/contact-us' />
-        <Route path='/sign-up' />
-      </Routes>
-    </Router>
-
         <div style={{
             display: 'flex',
             justifyContent: 'space-evenly',

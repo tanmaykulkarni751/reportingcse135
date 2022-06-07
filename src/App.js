@@ -3,6 +3,9 @@ import axios from 'axios'
 import './App.css'
 import Loading from './components/Loading'
 import Charts from './Charts'
+import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Report from './components/Report'
 
 const App = () => {
 
@@ -23,7 +26,15 @@ const App = () => {
 
   return (
     <div>
-      {(data.length > 0) ? <Charts data={data} /> : <div style={{
+      {(data.length > 0) ? <div>
+        <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' exact element={<Charts data={data} />} />
+        <Route path='/report' element={<Report data={data} />} />
+      </Routes>
+    </Router>
+      </div> : <div style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

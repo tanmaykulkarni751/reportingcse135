@@ -24,8 +24,6 @@ const Navbar = () => {
           <NavLink to='/' activeStyle>
             <Typography style={{color: "#FFF"}} variant="h6">User Management</Typography>
           </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
         <NavBtn>
           <NavBtnLink to='/'><Typography style={{color: "#FFF"}} variant="h6">Logout</Typography></NavBtnLink>
