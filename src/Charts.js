@@ -34,7 +34,7 @@ export default function Charts({ data }) {
         disabled++;
       }
   
-      if (item.cookiesEnabled === 'true') {
+      if (item.cookiesEn === 'true') {
         enabled++;
       } else {
         disabled++;
@@ -132,7 +132,7 @@ export default function Charts({ data }) {
                 alignItems: 'center',
                 justifyContent: 'center',
             }}>
-                <Typography style={{marginBottom: '50px', marginTop: '50px', fontWeight: 'bold'}} variant="h4">Users With Disabled Elements</Typography>
+                <Typography style={{marginBottom: '50px', marginTop: '50px', fontWeight: 'bold'}} variant="h4"># of Users with Elements</Typography>
                 <PieChart data={pieChartData} labels={['Enabled', 'Disabled']}/>
             </div>
             <div style={{

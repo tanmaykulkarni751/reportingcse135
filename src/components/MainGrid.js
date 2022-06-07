@@ -2,10 +2,6 @@ import './Grid.css';
 import React from "react";
 import { Typography } from '@mui/material';
 
-// Example of a data array that
-// you might receive from an API
-
-
 function Grid({datesJoined, dateCounts, uniqueDateCounts, dateLatencyTotal}) {
 
 	let data = [];
@@ -22,8 +18,8 @@ return (
 	<table>
 		<tr>
 		<th><Typography style={{fontWeight: 'bold'}} variant="h5">Date</Typography></th>
-		<th><Typography style={{fontWeight: 'bold'}} variant="h5">Number of Connections</Typography></th>
-		<th><Typography style={{fontWeight: 'bold'}} variant="h5">Number of Unique Users</Typography></th>
+		<th><Typography style={{fontWeight: 'bold'}} variant="h5"># of Connections</Typography></th>
+		<th><Typography style={{fontWeight: 'bold'}} variant="h5"># of Unique Users</Typography></th>
 		<th><Typography style={{fontWeight: 'bold'}} variant="h5">Average Latency Faced (ms)</Typography></th>
 		</tr>
 		{data.map((val, key) => {
