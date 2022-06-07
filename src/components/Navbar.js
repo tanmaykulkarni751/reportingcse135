@@ -7,33 +7,28 @@ import {
   NavBtn,
   NavBtnLink
 } from './NavbarElements';
+import { Typography } from '@mui/material';
 
 const Navbar = () => {
   return (
     <>
       <Nav>
         <NavLink to='/'>
-          <img src={'https://www.countryliving.com/uk/wildlife/pets/advice/a2899/buying-puppy-tips/'} alt='logo' />
+        <Typography style={{fontWeight: 'bold', color: "#FFF"}} variant="h5">Reporting</Typography>
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to='/about' activeStyle>
-            About
+          <NavLink to='/report' activeStyle>
+            <Typography style={{color: "#FFF"}} variant="h6">Generate Report</Typography>
           </NavLink>
-          <NavLink to='/services' activeStyle>
-            Services
-          </NavLink>
-          <NavLink to='/contact-us' activeStyle>
-            Contact Us
-          </NavLink>
-          <NavLink to='/sign-up' activeStyle>
-            Sign Up
+          <NavLink to='/' activeStyle>
+            <Typography style={{color: "#FFF"}} variant="h6">User Management</Typography>
           </NavLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+          <NavBtnLink to='/'><Typography style={{color: "#FFF"}} variant="h6">Logout</Typography></NavBtnLink>
         </NavBtn>
       </Nav>
     </>
