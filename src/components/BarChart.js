@@ -10,7 +10,11 @@ const BarChart = ({ data }) => {
     let barData = [];
     let labels = [];
 
-    for (const [key, value] of Object.entries(data)) {
+    const sortable = Object.entries(data)
+    .sort(([,a],[,b]) => a-b)
+    .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+
+    for (const [key, value] of Object.entries(sortable)) {
         if (key != "null") {
             labels.push(key);
             barData.push(value);

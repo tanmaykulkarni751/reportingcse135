@@ -3,6 +3,10 @@ import PieChart from "./components/PieChart";
 import { Typography } from '@mui/material';
 import BarChart from "./components/BarChart";
 
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Grid from "./components/Grid";
+
 
 export default function Charts({ data }) {
     console.log(data);
@@ -59,6 +63,20 @@ export default function Charts({ data }) {
     const pieChartData = [enabled, disabled];
     
     return (
+
+      <div>
+
+      <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' exact />
+        <Route path='/about' />
+        <Route path='/services' />
+        <Route path='/contact-us' />
+        <Route path='/sign-up' />
+      </Routes>
+    </Router>
+
         <div style={{
             display: 'flex',
             justifyContent: 'space-evenly',
@@ -80,7 +98,12 @@ export default function Charts({ data }) {
             }}>
                 <Typography style={{marginBottom: '50px', marginTop: '50px', fontWeight: 'bold'}} variant="h4">Bar</Typography>
                 <BarChart data={userDimMap}/>
+
             </div>
+
+        </div>
+        <Grid />
+
         </div>
     );
 }
