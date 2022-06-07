@@ -21,12 +21,12 @@ const Navbar = () => {
           <NavLink to='/report' activeStyle>
             <Typography style={{color: "#FFF"}} variant="h6">Generate Report</Typography>
           </NavLink>
-          <NavLink to='/' activeStyle>
+          <NavLink as="a" href="https://joshuagarcia.site/crudGrid.php" activeStyle>
             <Typography style={{color: "#FFF"}} variant="h6">User Management</Typography>
           </NavLink>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/'><Typography style={{color: "#FFF"}} variant="h6">Logout</Typography></NavBtnLink>
+          <NavBtnLink as="a" href="https://joshuagarcia.site/logout.php"><Typography style={{color: "#FFF"}} variant="h6">Logout</Typography></NavBtnLink>
         </NavBtn>
       </Nav>
     </>
