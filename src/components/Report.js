@@ -122,7 +122,7 @@ export default function Report({ data }) {
             <div style={{
                 display: 'flex',
                 justifyContent: 'space-evenly',
-                marginBottom: '50px',
+                marginBottom: '100px',
             }}>
                 <div style={{
                     display: 'flex',
